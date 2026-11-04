@@ -10,9 +10,6 @@
 <meta name="description" content="香菇爸菇粉雙 11：黑貓宅配全館免運、新朋友高端餐加送 $100 購物金、藍藻菌補貨、居家好物加購。">
 <meta property="og:type" content="website">
 <meta property="og:title" content="菇粉雙 11｜香菇爸・陪你養貓">
-<meta property="og:image" content="https://pupss4897-afk.github.io/mushroom-11/img/og.jpg">
-<meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
-<meta name="twitter:card" content="summary_large_image">
 <meta property="og:description" content="黑貓宅配全館免運・新朋友高端餐加送 $100 購物金・香菇爸幫你算好怎麼買">
 <link rel="icon" href="img/logo.png">
 <link rel="apple-touch-icon" href="img/logo.png">
@@ -197,6 +194,40 @@ footer a{text-decoration:underline}
 .float span b{color:var(--yel);font-weight:900}
 .float .btn{height:44px;padding:0 20px;font-size:15px;box-shadow:none}
 
+/* 商品介紹 */
+.info{margin-top:8px;border:0;background:#fff1d6;color:var(--red2);font:inherit;font-size:13.5px;font-weight:900;padding:6px 14px;border-radius:99px;cursor:pointer;box-shadow:0 3px 0 #f1d3a3}
+.info:active{transform:translateY(2px)}
+.sheet{position:fixed;inset:0;z-index:60;display:flex;align-items:flex-end;justify-content:center;background:rgba(40,12,6,.55);opacity:0;pointer-events:none;transition:opacity .25s}
+.sheet.on{opacity:1;pointer-events:auto}
+.sheet .pn{position:relative;width:100%;max-width:560px;max-height:88vh;overflow-y:auto;-webkit-overflow-scrolling:touch;background:var(--paper);border-radius:28px 28px 0 0;padding:0 0 calc(22px + env(safe-area-inset-bottom));transform:translateY(40px);transition:transform .3s cubic-bezier(.2,1.2,.4,1)}
+.sheet.on .pn{transform:none}
+.pn .hd{position:sticky;top:0;z-index:2;display:flex;align-items:center;gap:12px;padding:16px 18px 14px;background:var(--red);color:#fff}
+.pn .hd img{width:54px;height:54px;border-radius:14px;object-fit:cover;box-shadow:0 0 0 3px #fff}
+.pn .hd b{display:block;font-size:19px;font-weight:900;line-height:1.3}
+.pn .hd small{font-size:12.5px;color:#ffe1d6}
+.pn .x{margin-left:auto;flex:none;width:38px;height:38px;border:0;border-radius:50%;background:var(--yel);color:var(--red2);font-size:20px;font-weight:900;cursor:pointer}
+.pn .one{margin:16px 18px 0;padding:14px 16px;border-radius:18px;background:#fff1d6;border:2px dashed var(--yel2);font-size:15px;font-weight:700;line-height:1.6}
+.pn .one b{color:var(--red2)}
+.pn h4{margin:20px 18px 8px;font-size:16px;font-weight:900;color:var(--red2)}
+.pn h4:before{content:"";display:inline-block;width:9px;height:9px;margin-right:8px;background:var(--yel2);transform:rotate(45deg);vertical-align:2px}
+.pts{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin:0 18px}
+.pts div{padding:12px;border-radius:16px;background:#fbf1e4}
+.pts b{display:block;font-family:var(--num);font-size:22px;font-weight:900;color:var(--red);line-height:1.15}
+.pts span{font-size:12.5px;color:var(--ink2);font-weight:500}
+.pn ul{list-style:none;margin:0 18px}
+.pn li{position:relative;padding:8px 0 8px 22px;font-size:14px;color:var(--ink2);border-bottom:1px dashed #ecd8c3}
+.pn li:last-child{border-bottom:0}
+.pn li:before{content:"✓";position:absolute;left:0;top:8px;color:var(--red);font-weight:900}
+.pn table{width:calc(100% - 36px);margin:0 18px;border-collapse:separate;border-spacing:0;font-size:13.5px;border-radius:14px;overflow:hidden}
+.pn td{padding:8px 12px;background:#fbf1e4;border-bottom:2px solid var(--paper)}
+.pn td:last-child{text-align:right;font-weight:900;color:var(--ink)}
+.pn .qa{margin:0 18px;padding:12px 14px;border-radius:16px;background:#fbf1e4;font-size:13.5px;color:var(--ink2)}
+.pn .qa + .qa{margin-top:8px}
+.pn .qa b{display:block;color:var(--ink);font-size:14px;margin-bottom:2px}
+.pn .fine{margin:16px 18px 0;font-size:11.5px;color:var(--mute);line-height:1.6}
+.pn .act{display:flex;gap:8px;margin:18px 18px 0}
+.pn .act .btn{flex:1;height:50px;font-size:15px}
+
 /* 彩帶 */
 .confetti{position:absolute;left:0;right:0;top:0;height:900px;pointer-events:none;overflow:hidden}
 .confetti i{position:absolute;top:-20px;width:8px;height:14px;border-radius:2px;opacity:.9;animation:fall linear infinite}
@@ -307,6 +338,7 @@ footer a{text-decoration:underline}
       <div class="bd">
         <span class="sticker"><span>加送</span><b>$100</b><span>購物金</span></span>
         <h3>毛孩高端餐<br>專利凍乾益菌糧</h3>
+        <button type="button" class="info" data-info="food">這是什麼？看介紹 ›</button>
         <div class="sub">1.15kg／包・貓寶／狗寶都有</div>
         <div class="price"><b><small>$</small>1,100</b><s>原價 $1,680</s></div>
         <div class="gift"><span class="coin">$100</span><div><b>再送 $100 購物金！</b><span>11/27 週年慶解鎖團直接折（滿 $1,200 可用）</span></div></div>
@@ -322,6 +354,7 @@ footer a{text-decoration:underline}
       <div class="bd">
         <span class="sticker"><span>新朋友</span><b>1 瓶</b><span>也能買</span></span>
         <h3>藍藻益生菌膠囊</h3>
+        <button type="button" class="info" data-info="algae">這是什麼？看介紹 ›</button>
         <div class="sub">30 粒／瓶・犬貓都可以吃</div>
         <div class="opts" id="algaeNew"></div>
         <div class="order"><a class="btn r pulse" data-msg="香菇爸～我是新朋友，想跟雙 11 藍藻益生菌（＿瓶）" data-ga="new-藍藻">我要試藍藻菌</a></div>
@@ -338,6 +371,7 @@ footer a{text-decoration:underline}
       <div class="bd">
         <span class="sticker"><span>每瓶最低</span><b>$1,080</b></span>
         <h3>藍藻益生菌膠囊</h3>
+        <button type="button" class="info" data-info="algae">這是什麼？看介紹 ›</button>
         <div class="sub">30 粒／瓶・犬貓都可以吃</div>
         <div class="opts" id="algaeOpts"></div>
         <div class="order"><a class="btn r pulse" data-msg="香菇爸～我是老菇粉，要跟雙 11 藍藻益生菌囤貨（＿瓶）" data-ga="algae">我要囤藍藻菌</a></div>
@@ -403,6 +437,8 @@ footer a{text-decoration:underline}
   </footer>
 </div>
 
+<div class="sheet" id="sheet" aria-hidden="true"><div class="pn" role="dialog" aria-modal="true" id="pn"></div></div>
+
 <div class="float"><span><b>黑貓宅配全館免運</b><br>雙 11 開團中！</span><a class="btn line" data-msg="香菇爸～我要跟雙 11 的團" data-ga="float-LINE">LINE 跟團</a></div>
 
 <script>
@@ -417,6 +453,31 @@ var ALGAE = [                                       // 買過的菇粉的藍藻�
 ];
 var TICKER = ["黑貓宅配全館免運", "新朋友高端餐送 $100 購物金", "藍藻菌每瓶最低 $1,080", "11/17 高端餐快閃 先預購先卡位", "11/27 週年慶一年最划算"];
 var LINE_ID = "@mushroom131";
+/* 商品介紹（點「這是什麼？」跳出來）— ⛔ 不寫療效：不提器官、吸收、免疫、治療 */
+var INFO = {
+  algae: {
+    img: "img/algae.jpg", name: "藍藻益生菌膠囊", sub: "金牌鏟屎官・30 粒／瓶・犬貓都可以吃",
+    one: "一顆膠囊＝<b>美國加州藍藻</b>＋<b>8 株複方乳酸菌</b>，打開拌進罐罐或乾糧，<b>每天幾秒鐘</b>就搞定日常保養。",
+    pts: [["18%", "藻青苷・美國加州 Earthrise® 螺旋藻"], ["8 株", "複方乳酸菌・4 種配方組合"], ["雞肉風味", "挑嘴貓也比較願意吃"], ["$36 起", "每天的花費（10 瓶組）"]],
+    list: ["打開膠囊，粉末撒在罐罐或乾糧上就好", "天然雞肉風味，幼貓、老貓都可以吃", "不用冷藏，放陰涼乾燥處；未拆封可放 2 年", "依《寵物食品管理法》合法登錄，可到農業部寵物食品申報網搜尋「金牌鏟屎官」", "第三方檢驗：不含黃麴毒素、農藥殘留、重金屬"],
+    tableT: "一天吃幾顆？",
+    table: [["10 公斤以下（大部分的貓）", "每天 1～2 粒"], ["11～20 公斤", "每天 2～3 粒"], ["20 公斤以上", "每天 3～4 粒"]],
+    qa: [["一瓶可以吃多久？", "一隻貓每天 1 粒，一瓶 30 粒大約吃 1 個月。"], ["可以跟高端餐一起吃嗎？", "可以！很多菇粉都是把藍藻粉直接撒在高端餐上一起吃。"], ["要跟化毛膏一起吃嗎？", "不衝突，照原本習慣就好。有疑問可以 LINE 問香菇爸。"]],
+    fine: "本品為寵物食品，非動物用藥品，無法替代主食。若有醫療相關問題，請先諮詢獸醫師。本產品含牛奶及其製品。",
+    msg: "香菇爸～我想跟雙 11 藍藻益生菌（＿瓶）", ask: "香菇爸～我想多了解藍藻益生菌，我家主子＿歲、＿公斤"
+  },
+  food: {
+    img: "img/food.jpg", name: "毛孩高端餐", sub: "專利凍乾益菌糧・1.15kg／包・貓寶／狗寶",
+    one: "每一顆飼料都包著<b>原雞肉凍乾絲</b>，<b>無穀</b>、不加味精色素香料，是可以<b>當正餐</b>天天吃的主食。",
+    pts: [["95%", "動物性蛋白來源"], ["0%", "穀物・味精・色素・香料"], ["凍乾肉絲", "每顆都包覆，一開袋就香"], ["AAFCO", "符合主食營養標準"]],
+    list: ["外層原雞肉凍乾絲，內層加了專利益菌配方", "全年齡都能吃，貓寶、狗寶分開配方", "粗蛋白 ≥ 34%、粗脂肪 ≥ 11%", "加了魚油、卵磷脂、牛磺酸、鳳梨＆木瓜酵素", "換糧建議 7～10 天，新舊慢慢混著換"],
+    tableT: "貓寶一天吃多少？",
+    table: [["3 公斤以下", "35～40 g"], ["3～4 公斤", "40～50 g"], ["4～5 公斤", "50～65 g"], ["5～6 公斤", "65～75 g"], ["6～7 公斤", "75～90 g"]],
+    qa: [["一包可以吃多久？", "4～5 公斤的貓，一包大約吃 3 週；家裡貓比較多就要多備幾包。"], ["挑嘴貓會吃嗎？", "外層是真的雞肉凍乾絲，很多挑嘴貓一開袋就衝過來。"], ["可以跟藍藻菌一起吃嗎？", "可以！把藍藻粉直接撒在高端餐上，一起吃最方便。"]],
+    fine: "餵食量依體重、活動量調整，每天分 2～3 次餵，並準備充足的水。食用相關問題可諮詢獸醫師。",
+    msg: "香菇爸～我想跟雙 11 高端餐（＿包，貓寶／狗寶）", ask: "香菇爸～我想多了解高端餐，我家主子＿歲、＿公斤"
+  }
+};
 /* ===== 以下不用改 ===== */
 function money(n) { return "$" + n.toLocaleString("en-US"); }
 function opts(list) {
@@ -435,6 +496,28 @@ $("#flags").innerHTML = new Array(15).join("<span></span>");
     h += '<i style="left:' + (Math.random() * 100).toFixed(1) + "%;background:" + col[i % col.length] + ";animation-duration:" + (5 + Math.random() * 5).toFixed(1) + "s;animation-delay:-" + (Math.random() * 8).toFixed(1) + "s;transform:rotate(" + Math.round(Math.random() * 360) + 'deg)"></i>';
   }
   c.innerHTML = h;
+})();
+
+function lineURL(m) { return "https://line.me/R/oaMessage/" + LINE_ID + "/?" + encodeURIComponent(m); }
+(function () {
+  var sh = $("#sheet"), pn = $("#pn");
+  function open(k) {
+    var d = INFO[k];
+    pn.innerHTML = '<div class="hd"><img src="' + d.img + '" alt=""><div><b>' + d.name + "</b><small>" + d.sub + '</small></div><button type="button" class="x" aria-label="關閉">×</button></div>' +
+      '<div class="one">' + d.one + "</div>" +
+      '<h4>重點一次看</h4><div class="pts">' + d.pts.map(function (x) { return "<div><b>" + x[0] + "</b><span>" + x[1] + "</span></div>"; }).join("") + "</div>" +
+      "<h4>香菇爸選它的原因</h4><ul>" + d.list.map(function (x) { return "<li>" + x + "</li>"; }).join("") + "</ul>" +
+      "<h4>" + d.tableT + "</h4><table>" + d.table.map(function (x) { return "<tr><td>" + x[0] + "</td><td>" + x[1] + "</td></tr>"; }).join("") + "</table>" +
+      "<h4>大家常問</h4>" + d.qa.map(function (x) { return '<div class="qa"><b>' + x[0] + "</b>" + x[1] + "</div>"; }).join("") +
+      '<p class="fine">' + d.fine + "</p>" +
+      '<div class="act"><a class="btn r" href="' + lineURL(d.msg) + '" target="_blank" rel="noopener">我要跟這個</a><a class="btn line" href="' + lineURL(d.ask) + '" target="_blank" rel="noopener">先問香菇爸</a></div>';
+    pn.scrollTop = 0; sh.classList.add("on"); sh.setAttribute("aria-hidden", "false"); document.body.style.overflow = "hidden";
+    if (typeof gtag === "function") gtag("event", "m11_info", { item: k });
+  }
+  function close() { sh.classList.remove("on"); sh.setAttribute("aria-hidden", "true"); document.body.style.overflow = ""; }
+  document.querySelectorAll("[data-info]").forEach(function (b) { b.addEventListener("click", function () { open(b.dataset.info); }); });
+  sh.addEventListener("click", function (e) { if (e.target === sh || e.target.closest(".x")) close(); });
+  document.addEventListener("keydown", function (e) { if (e.key === "Escape") close(); });
 })();
 
 document.querySelectorAll("[data-msg]").forEach(function (a) {
