@@ -89,6 +89,16 @@ a{color:inherit;text-decoration:none}
 @keyframes pulse{50%{transform:scale(1.05)}}
 
 /* 免運 */
+.vip{position:relative;margin:26px 16px 22px;padding:18px 16px 16px;border-radius:24px;background:var(--paper);border:3px dashed var(--red);box-shadow:0 6px 0 rgba(120,20,10,.25),0 16px 26px rgba(90,15,8,.25)}
+.vip .rb{position:absolute;left:50%;top:-16px;transform:translateX(-50%);white-space:nowrap;background:var(--red);color:var(--yel);font-weight:900;font-size:13px;letter-spacing:2px;padding:4px 16px;border-radius:99px;box-shadow:0 3px 0 var(--red2)}
+.vip .in{display:grid;grid-template-columns:104px 1fr;gap:14px;align-items:center;margin-top:6px}
+.vip .in img{width:104px;height:104px;object-fit:cover;border-radius:18px;box-shadow:0 0 0 3px var(--yel)}
+.vip h2{font-size:21px;font-weight:900;line-height:1.3;color:var(--ink)}
+.vip h2 em{font-style:normal;color:var(--red)}
+.vip p{font-size:13px;color:var(--ink2);margin-top:4px;font-weight:700}
+.vip .date{position:absolute;right:8px;top:-30px;width:70px;height:70px;border-radius:50%;background:var(--yel);color:var(--red2);display:flex;flex-direction:column;align-items:center;justify-content:center;line-height:1.05;box-shadow:0 0 0 4px #fff,0 6px 12px rgba(90,15,8,.25);animation:wob 2.6s ease-in-out infinite;z-index:2}
+.vip .date b{font-family:var(--num);font-size:20px}.vip .date span{font-size:11px;font-weight:900}
+.vip .btn{width:100%;margin-top:14px}
 .ship{position:relative;margin:6px 16px 0;padding:20px 18px 18px 18px;border-radius:24px;background:var(--yel);box-shadow:0 6px 0 var(--yel2),0 16px 26px rgba(90,15,8,.25);overflow:hidden}
 .ship:before{content:"";position:absolute;inset:7px;border:2px dashed rgba(184,37,31,.35);border-radius:18px;pointer-events:none}
 .ship .road{position:relative;height:56px;overflow:hidden}
@@ -311,6 +321,17 @@ footer a{text-decoration:underline}
       <a class="btn line" data-msg="香菇爸～我要跟雙 11 的團" data-ga="hero-LINE">LINE 跟團</a>
     </div>
   </section>
+
+  <!-- 高端餐愛用者預購（拉到最上面） -->
+  <div class="vip rv">
+    <span class="rb">★ 愛用者看這裡 ★</span>
+    <span class="date"><b>11/17</b><span>快閃</span></span>
+    <div class="in">
+      <img src="img/food.jpg" alt="毛孩高端餐">
+      <div><h2>高端餐<br><em>愛用者預購</em>開跑</h2><p>名額有限 先預購先卡位</p></div>
+    </div>
+    <a class="btn line pulse" data-msg="菇爸我要預購高端餐" data-ga="top-預購高端餐">LINE 預購高端餐 ›</a>
+  </div>
 
   <!-- 免運 -->
   <div class="ship rv">
